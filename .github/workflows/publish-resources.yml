@@ -2,7 +2,7 @@ name: Publish episode slide notes
 
 on:
   schedule:
-    # Includes 14:00 UTC = 07:00 Vancouver (BC permanent UTC-7).
+    # Includes 13:00 UTC = 06:00 Vancouver (BC permanent UTC-7).
     # Also catches manual Episode 1 publication and retries missed jobs.
     - cron: '*/5 * * * *'
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
           import urllib.parse
           import urllib.request
 
-          EPISODES = [{'episode': 1, 'tag': 'episode-01', 'video_id': 'q2H8Uisq8pU', 'publish_at': None, 'asset': 'Locademy_Episode_01_Slide_Notes.pdf', 'size': 15922176, 'sha256': 'c78d440006f6ae6760c5b4152f13c2dab67f1c7fdca1e4e6040430f57463a716'}, {'episode': 2, 'tag': 'episode-02', 'video_id': 'kYz78pssqdc', 'publish_at': '2026-11-17T14:00:00Z', 'asset': 'Locademy_Episode_02_Slide_Notes.pdf', 'size': 11223328, 'sha256': '8f590615e88bf1561f68b13ca2192996a4dea0d7009fc8c99b6129ab204836c1'}, {'episode': 3, 'tag': 'episode-03', 'video_id': 'z0fPY7bt9-0', 'publish_at': '2026-11-18T14:00:00Z', 'asset': 'Locademy_Episode_03_Slide_Notes.pdf', 'size': 14600961, 'sha256': '19e61e68ec90395453a7eb967b171229b7c6d85ac09109c3bb807a5a934816dd'}, {'episode': 4, 'tag': 'episode-04', 'video_id': 'q5lhVDPY3IU', 'publish_at': '2026-11-19T14:00:00Z', 'asset': 'Locademy_Episode_04_Slide_Notes.pdf', 'size': 20860000, 'sha256': 'c51aec23f4c1b832d6d11bd2674a2bd220b23c8f0e18f39adfd0a0839dc89b88'}, {'episode': 5, 'tag': 'episode-05', 'video_id': 'GSeeVWo2jeo', 'publish_at': '2026-11-20T14:00:00Z', 'asset': 'Locademy_Episode_05_Slide_Notes.pdf', 'size': 18746918, 'sha256': '14612d93b906747a509e46dbb5c7d1f66ecb0d75b0ff86097bf5dc90d6b9cf3f'}, {'episode': 6, 'tag': 'episode-06', 'video_id': 'YW5xDQpZ-kI', 'publish_at': '2026-11-21T14:00:00Z', 'asset': 'Locademy_Episode_06_Slide_Notes.pdf', 'size': 25132526, 'sha256': 'd2dec7a14f7a0c37e512bb8979f12d6cf5733b2ae6b436705fadeecedd8af882'}, {'episode': 7, 'tag': 'episode-07', 'video_id': 'H71eYugl34Q', 'publish_at': '2026-11-22T14:00:00Z', 'asset': 'Locademy_Episode_07_Slide_Notes.pdf', 'size': 19019875, 'sha256': '2f873121f89131e9738003a1495c54dee9a1c6b1ee0bdbef2b6f94dde4603b79'}, {'episode': 8, 'tag': 'episode-08', 'video_id': 'hbZnbPQWnLw', 'publish_at': '2026-11-23T14:00:00Z', 'asset': 'Locademy_Episode_08_Slide_Notes.pdf', 'size': 18917428, 'sha256': '2f1189bfbfd7adb7177b5ab053eb5a52fb22acc8976806bcb3b9bfd31ec9b079'}]
+          EPISODES = [{'episode': 1, 'tag': 'episode-01', 'video_id': 'q2H8Uisq8pU', 'publish_at': None, 'asset': 'Locademy_Episode_01_Slide_Notes.pdf', 'size': 15922176, 'sha256': 'c78d440006f6ae6760c5b4152f13c2dab67f1c7fdca1e4e6040430f57463a716'}, {'episode': 2, 'tag': 'episode-02', 'video_id': 'kYz78pssqdc', 'publish_at': '2026-11-17T13:00:00Z', 'asset': 'Locademy_Episode_02_Slide_Notes.pdf', 'size': 11223328, 'sha256': '8f590615e88bf1561f68b13ca2192996a4dea0d7009fc8c99b6129ab204836c1'}, {'episode': 3, 'tag': 'episode-03', 'video_id': 'z0fPY7bt9-0', 'publish_at': '2026-11-18T13:00:00Z', 'asset': 'Locademy_Episode_03_Slide_Notes.pdf', 'size': 14600961, 'sha256': '19e61e68ec90395453a7eb967b171229b7c6d85ac09109c3bb807a5a934816dd'}, {'episode': 4, 'tag': 'episode-04', 'video_id': 'q5lhVDPY3IU', 'publish_at': '2026-11-19T13:00:00Z', 'asset': 'Locademy_Episode_04_Slide_Notes.pdf', 'size': 20860000, 'sha256': 'c51aec23f4c1b832d6d11bd2674a2bd220b23c8f0e18f39adfd0a0839dc89b88'}, {'episode': 5, 'tag': 'episode-05', 'video_id': 'GSeeVWo2jeo', 'publish_at': '2026-11-20T13:00:00Z', 'asset': 'Locademy_Episode_05_Slide_Notes.pdf', 'size': 18746918, 'sha256': '14612d93b906747a509e46dbb5c7d1f66ecb0d75b0ff86097bf5dc90d6b9cf3f'}, {'episode': 6, 'tag': 'episode-06', 'video_id': 'YW5xDQpZ-kI', 'publish_at': '2026-11-21T13:00:00Z', 'asset': 'Locademy_Episode_06_Slide_Notes.pdf', 'size': 25132526, 'sha256': 'd2dec7a14f7a0c37e512bb8979f12d6cf5733b2ae6b436705fadeecedd8af882'}, {'episode': 7, 'tag': 'episode-07', 'video_id': 'H71eYugl34Q', 'publish_at': '2026-11-22T13:00:00Z', 'asset': 'Locademy_Episode_07_Slide_Notes.pdf', 'size': 19019875, 'sha256': '2f873121f89131e9738003a1495c54dee9a1c6b1ee0bdbef2b6f94dde4603b79'}, {'episode': 8, 'tag': 'episode-08', 'video_id': 'hbZnbPQWnLw', 'publish_at': '2026-11-23T13:00:00Z', 'asset': 'Locademy_Episode_08_Slide_Notes.pdf', 'size': 18917428, 'sha256': '2f1189bfbfd7adb7177b5ab053eb5a52fb22acc8976806bcb3b9bfd31ec9b079'}]
           BASE = 'https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY']
           TOKEN = os.environ['GH_TOKEN']
           DRY_RUN = os.environ.get('DRY_RUN', 'true').lower() == 'true'
@@ -95,12 +95,12 @@ jobs:
                   print(tag, 'waiting until', due)
                   summary.append('- ' + tag + ': waiting until ' + due)
                   continue
-              if not video_available(episode['video_id']):
+              if due is None and not video_available(episode['video_id']):
                   print(tag, 'waiting for YouTube video availability')
                   summary.append('- ' + tag + ': waiting for YouTube video availability')
                   continue
               if DRY_RUN:
-                  print(tag, 'would publish; video available and schedule reached')
+                  print(tag, 'would publish; release conditions met')
                   summary.append('- ' + tag + ': ready; dry run kept draft')
                   continue
               published = api('/releases/' + str(release['id']), {'draft': False, 'make_latest': 'false'})
